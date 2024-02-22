@@ -1,3 +1,6 @@
+function playRound(playerSelection, computerSelection {
+
+})
 function getComputerChoice() {
     let x = 0
     x = Math.floor(Math.random() * 3) + 1;
@@ -9,4 +12,5 @@ function getComputerChoice() {
         return "Scissors";
     } else {return "Oops!"}
 }
-console.log(getComputerChoice())
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
