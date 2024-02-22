@@ -3,28 +3,16 @@ function playRound(playerSelection, computerSelection) {
     console.log("You picked " + player);
     console.log("The computer picked " + computerSelection);
     if (player = "rock") {
-        if (computerSelection = "rock") {
-            return "It's a tie!";
-        } else if (computerSelection = "scissors") {
-            return "You win! Rock beats scissors.";
-        } else if (computerSelection = "paper") {
-            return "You lose! Paper beats rock.";
-        }
-    } else if (player = "paper") {
-        if (computerSelection = "rock") {
-            return "You win! Paper beats rock.";
-        } else if (computerSelection = "scissors") {
-            return "You lose! Scissors beats paper";
-        } else if (computerSelection = "paper") {
-            return "It's a tie!";
-        }
-    } else if (player = "scissors") {
-        if (computerSelection = "rock") {
-            return "You lose! Rock beats scissors";
-        } else if (computerSelection = "scissors") {
-            return "It's a tie!";
-        } else if (computerSelection = "paper") {
-            return "You win! Scissors beats paper.";
+        switch (computerSelection) {
+            case "rock":
+                return "It's a tie!";
+                break;
+            case "scissors":
+                return "You win! Rock beats scissors.";
+                break;
+            case "paper":
+                return "You lose! Paper beats rock.";
+                break;
         }
     }
 }
