@@ -2,6 +2,7 @@ function playRound(playerSelection, computerSelection) {
     let player = playerSelection.toLowerCase() //convert player input to lowercase
     let computer = computerSelection.toLowerCase() //convert computer choice to lowercase
     console.log("You picked " + player);
+    console.log("The computer picked " + computer);
     if (player = "rock") {
         if (computer = "rock") {
             return "It's a tie!";
