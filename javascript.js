@@ -9,3 +9,4 @@ function getComputerChoice() {
         return "Scissors";
     } else {return "Oops!"}
 }
+console.log(getComputerChoice())
