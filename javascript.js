@@ -11,10 +11,14 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         score++
         return "It's a tie!"; // A tie is worth 1 point
-    } else if (playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper") {
+    } else if (playerSelection == "paper" && computerSelection == "rock" || 
+                playerSelection == "rock" && computerSelection == "scissors" || 
+                playerSelection == "scissors" && computerSelection == "paper") {
         score = score + 2;
         return "You win!"; // A win is worth 2 points
-    } else if (playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock") {
+    } else if (playerSelection == "rock" && computerSelection == "paper" || 
+                playerSelection == "paper" && computerSelection == "scissors" || 
+                playerSelection == "scissors" && computerSelection == "rock") {
         return "You lose!"; // No points for losing
     } else {return "Uhhh..."} // Default message if player inputs something other than rock, paper, or scissors
 }
