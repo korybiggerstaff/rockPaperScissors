@@ -1,3 +1,7 @@
+let playerSelection = "";
+let computerSelection = "";
+let score = 0
+
 function playRound(playerSelection, computerSelection) {
     let player = playerSelection.toLowerCase() //convert player input to lowercase
     console.log("You picked " + player);
