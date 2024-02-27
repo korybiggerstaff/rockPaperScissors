@@ -37,3 +37,5 @@ function playGame() {
 console.log(playRound(playerSelection, computerSelection));
  }
 
+playGame(playerSelection, computerSelection);
+console.log("Final score: " + score);
