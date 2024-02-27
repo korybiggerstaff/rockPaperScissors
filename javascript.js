@@ -9,7 +9,7 @@ function playRound(playerSelection, computerSelection) {
     console.log("You picked " + playerSelection);
     console.log("The computer picked " + computerSelection);
     if (playerSelection == computerSelection) {
-                return "It's a tie!";
+        return "It's a tie!";
     } else if (playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper") {
         score++;
         return "You win!";
@@ -30,11 +30,9 @@ function getComputerChoice() {
     } else {return "Oops!"}
 }
 function playGame() {
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-console.log(playRound(playerSelection, computerSelection));
+    for (let i; i < 5; i++) {
+        console.log(playRound(playerSelection, computerSelection));
+    }
  }
 
 playGame(playerSelection, computerSelection);
