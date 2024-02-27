@@ -6,8 +6,8 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Rock, paper, or scissors?");
     playerSelection = playerSelection.toLowerCase(); //change player input to lowercase
     computerSelection = getComputerChoice();
-    console.log(`You picked ${playerSelection}`);
-    console.log(`The computer picked ${computerSelection}`);
+    console.log(`You picked ${playerSelection}.`);
+    console.log(`The computer picked ${computerSelection}.`);
     if (playerSelection == computerSelection) {
         score++
         return "It's a tie!"; // A tie is worth 1 point
