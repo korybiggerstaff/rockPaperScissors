@@ -3,22 +3,19 @@ let computerSelection = "";
 let score = 0
 
 function playRound(playerSelection, computerSelection) {
-    let player = playerSelection.toLowerCase() //convert player input to lowercase
-    console.log("You picked " + player);
+    playerSelection = prompt("Rock, paper, or scissors?");
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = getComputerChoice();
+    console.log("You picked " + playerSelection);
     console.log("The computer picked " + computerSelection);
-    if (player = "rock") {
-        switch (computerSelection) {
-            case "rock":
+    if (playerSelection == computerSelection) {
                 return "It's a tie!";
-                break;
-            case "scissors":
-                return "You win! Rock beats scissors.";
-                break;
-            case "paper":
-                return "You lose! Paper beats rock.";
-                break;
-        }
-    }
+    } else if (playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper") {
+        score++;
+        return "You win!";
+    } else if (playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock") {
+        return "You lose!";
+    } else {return "Uhhh..."}
 }
 
 function getComputerChoice() {
