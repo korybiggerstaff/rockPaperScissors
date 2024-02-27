@@ -6,8 +6,8 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Rock, paper, or scissors?");
     playerSelection = playerSelection.toLowerCase(); //change player input to lowercase
     computerSelection = getComputerChoice();
-    console.log("You picked " + playerSelection);
-    console.log("The computer picked " + computerSelection);
+    console.log(`You picked ${playerSelection}`);
+    console.log(`The computer picked ${computerSelection}`);
     if (playerSelection == computerSelection) {
         score++
         return "It's a tie!"; // A tie is worth 1 point
@@ -33,7 +33,7 @@ function getComputerChoice() {
 function playGame() {
     for (let i = 0; i < 5; i++) { // Play 5 rounds.
         console.log(playRound(playerSelection, computerSelection)); // Play a round, return a string and print to console.
-        console.log("Current score: " + score); // Display current score in console after each round.
+        console.log(`Current score: ${score}`); // Display current score in console after each round.
     }
  }
 
