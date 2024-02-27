@@ -30,7 +30,7 @@ function getComputerChoice() {
     } else {return "Oops!"}
 }
 function playGame() {
-    for (let i; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         console.log(playRound(playerSelection, computerSelection));
     }
  }
