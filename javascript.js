@@ -32,6 +32,7 @@ function getComputerChoice() {
 function playGame() {
     for (let i = 0; i < 5; i++) {
         console.log(playRound(playerSelection, computerSelection));
+        console.log("Current score: " + score);
     }
  }
 
