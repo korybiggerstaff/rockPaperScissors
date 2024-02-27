@@ -29,6 +29,11 @@ function getComputerChoice() {
         return "scissors";
     } else {return "Oops!"}
 }
-const playerSelection = "Scissors";
-const computerSelection = getComputerChoice();
+function playGame() {
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
 console.log(playRound(playerSelection, computerSelection));
+ }
+
