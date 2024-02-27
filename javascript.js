@@ -1,6 +1,6 @@
 let playerSelection = "";
 let computerSelection = "";
-let score = 0
+let score = 0;
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Rock, paper, or scissors?");
@@ -9,9 +9,10 @@ function playRound(playerSelection, computerSelection) {
     console.log("You picked " + playerSelection);
     console.log("The computer picked " + computerSelection);
     if (playerSelection == computerSelection) {
+        score++
         return "It's a tie!";
     } else if (playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper") {
-        score++;
+        score = score + 2;
         return "You win!";
     } else if (playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock") {
         return "You lose!";
@@ -37,4 +38,11 @@ function playGame() {
  }
 
 playGame(playerSelection, computerSelection);
+if (score > 5) {
+    console.log("You win the match!");
+} else if (score = 5) {
+    console.log("The match is a draw.");
+} else {
+    console.log("You lose the match!");
+}
 console.log("Final score: " + score);
