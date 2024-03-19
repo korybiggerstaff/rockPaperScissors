@@ -35,10 +35,7 @@ function getComputerChoice() {
     } else {return "Oops!"} // Player should never see this message.
 }
 function playGame() {
-    for (let i = 0; i < 5; i++) { // Play 5 rounds.
-        console.log(playRound(playerSelection, computerSelection)); // Play a round, return a string and print to console.
-        console.log(`Current score: ${score}`); // Display current score in console after each round.
-    }
+
  }
 
 playGame(playerSelection, computerSelection);
