@@ -53,9 +53,12 @@ scissors.setAttribute("class", "playerInput");
 scissors.textContent = "Scissors";
 document.appendChild(scissors);
 
+let button = document.getElementsByClassName("playerInput");
+button.addEventListener("click", (e) => {
+   console.log(document.querySelector(e));
+});
 
-
-playGame(playerSelection, computerSelection);
+/*playGame(playerSelection, computerSelection);
 if (score > 5) {
     console.log("You win the match!");
 } else if (score = 5) {
@@ -63,4 +66,4 @@ if (score > 5) {
 } else {
     console.log("You lose the match!");
 }
-console.log("Final score: " + score);
+console.log("Final score: " + score);*/
