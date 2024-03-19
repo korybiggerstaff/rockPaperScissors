@@ -34,9 +34,26 @@ function getComputerChoice() {
         return "scissors";
     } else {return "Oops!"} // Player should never see this message.
 }
-function playGame() {
 
- }
+let rock = document.createElement("button");
+rock.setAttribute("id", "rock");
+rock.setAttribute("class", "playerInput");
+rock.textContent = "Rock";
+document.appendChild(rock);
+
+let paper = document.createElement("button");
+paper.setAttribute("id", "paper");
+paper.setAttribute("class", "playerInput");
+paper.textContent = "Paper";
+document.appendChild(paper);
+
+let scissors = document.createElement("button");
+scissors.setAttribute("id", "scissors");
+scissors.setAttribute("class", "playerInput");
+scissors.textContent = "Scissors";
+document.appendChild(scissors);
+
+
 
 playGame(playerSelection, computerSelection);
 if (score > 5) {
