@@ -56,9 +56,13 @@ scissors.textContent = "Scissors";
 container.appendChild(scissors);
 
 let button = document.getElementsByClassName("playerInput");
-button.addEventListener("click", (e) => {
-   console.log(document.querySelector(e));
-});
+for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", () =>{
+        playerSelection = button[i].id;
+        alert(playRound(playerSelection, computerSelection));
+        
+    }
+)}
 
 /*playGame(playerSelection, computerSelection);
 if (score > 5) {
