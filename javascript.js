@@ -35,23 +35,25 @@ function getComputerChoice() {
     } else {return "Oops!"} // Player should never see this message.
 }
 
+const container = document.querySelector(".container");
+
 let rock = document.createElement("button");
 rock.setAttribute("id", "rock");
 rock.setAttribute("class", "playerInput");
 rock.textContent = "Rock";
-document.appendChild(rock);
+container.appendChild(rock);
 
 let paper = document.createElement("button");
 paper.setAttribute("id", "paper");
 paper.setAttribute("class", "playerInput");
 paper.textContent = "Paper";
-document.appendChild(paper);
+container.appendChild(paper);
 
 let scissors = document.createElement("button");
 scissors.setAttribute("id", "scissors");
 scissors.setAttribute("class", "playerInput");
 scissors.textContent = "Scissors";
-document.appendChild(scissors);
+container.appendChild(scissors);
 
 let button = document.getElementsByClassName("playerInput");
 button.addEventListener("click", (e) => {
