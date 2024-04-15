@@ -61,13 +61,3 @@ for (let i = 0; i < button.length; i++) {
         
     }
 )}
-
-/*playGame(playerSelection, computerSelection);
-if (score > 5) {
-    console.log("You win the match!");
-} else if (score = 5) {
-    console.log("The match is a draw.");
-} else {
-    console.log("You lose the match!");
-}
-console.log("Final score: " + score);*/
