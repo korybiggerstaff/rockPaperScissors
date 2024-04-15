@@ -35,6 +35,8 @@ function getComputerChoice() {
 }
 
 const container = document.querySelector(".container");
+const playerScoreContainer = document.querySelector(".playerScoreContainer");
+const compScoreContainer = document.querySelector(".compScoreContainer");
 
 let rock = document.createElement("button");
 rock.setAttribute("id", "rock");
@@ -53,6 +55,14 @@ scissors.setAttribute("id", "scissors");
 scissors.setAttribute("class", "playerInput");
 scissors.textContent = "Scissors";
 container.appendChild(scissors);
+
+let playerScoreDisp = document.createElement("p");
+playerScoreDisp.textContent = `Player score: ` + playerScore;
+playerScoreContainer.append(playerScoreDisp);
+
+let compScoreDisp = document.createElement("p");
+compScoreDisp.textContent = `Computer score: ` + computerScore;
+compScoreContainer.append(compScoreDisp);
 
 let button = document.getElementsByClassName("playerInput");
 for (let i = 0; i < button.length; i++) {
