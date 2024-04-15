@@ -65,10 +65,23 @@ compScoreDisp.textContent = `Computer score: ` + computerScore;
 compScoreContainer.append(compScoreDisp);
 
 let button = document.getElementsByClassName("playerInput");
-for (let i = 0; i < button.length; i++) {
+for (let i = 0; i < button.length; i++) { // Put a click event listener on each button, which plays a round using player input
     button[i].addEventListener("click", () =>{
         playerSelection = button[i].id;
-        alert(playRound(playerSelection, computerSelection));
-        
+        playRound(playerSelection, computerSelection);
+        playerScoreDisp.textContent = `Player score: ` + playerScore;
+        compScoreDisp.textContent = `Computer score: ` + computerScore;
+        if (playerScore == 5) {
+            alert("Game over -- YOU WIN!");
+            rock.disabled = true;
+            paper.disabled = true;
+            scissors.disabled = true;
+        } else if (computerScore == 5) {
+            alert("Game over -- You lose");
+            rock.disabled = true;
+            paper.disabled = true;
+            scissors.disabled = true;
+        }
     }
 )}
+
