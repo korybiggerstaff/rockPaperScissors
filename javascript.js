@@ -8,13 +8,12 @@ function playRound(playerSelection, computerSelection) {
     console.log(`You picked ${playerSelection}.`);
     console.log(`The computer picked ${computerSelection}.`);
     if (playerSelection == computerSelection) {
-        score++
-        return "It's a tie!"; // A tie is worth 1 point
+        return "It's a tie!"; // A tie is worth no points
     } else if (playerSelection == "paper" && computerSelection == "rock" || 
                 playerSelection == "rock" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "paper") {
-        score = score + 2;
-        return "You win!"; // A win is worth 2 points
+        playerScore = playerScore + 1;
+        return "You win!"; // A win is worth 1 point for you
     } else if (playerSelection == "rock" && computerSelection == "paper" || 
                 playerSelection == "paper" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "rock") {
