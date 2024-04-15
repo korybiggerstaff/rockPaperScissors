@@ -8,17 +8,18 @@ function playRound(playerSelection, computerSelection) {
     console.log(`You picked ${playerSelection}.`);
     console.log(`The computer picked ${computerSelection}.`);
     if (playerSelection == computerSelection) {
-        return "It's a tie!"; // A tie is worth no points
+        alert(`It's a tie!`);
     } else if (playerSelection == "paper" && computerSelection == "rock" || 
                 playerSelection == "rock" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "paper") {
-        playerScore = playerScore + 1;
-        return "You win!"; // A win is worth 1 point for you
+        playerScore++;
+        alert(playerSelection + ` beats ` + computerSelection + ` -- You win!`);
     } else if (playerSelection == "rock" && computerSelection == "paper" || 
                 playerSelection == "paper" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "rock") {
-        return "You lose!"; // No points for losing
-    } else {return "Uhhh..."} // Default message if player inputs something other than rock, paper, or scissors
+        computerScore++;
+        alert(computerSelection + ` beats ` + playerSelection + ` -- You lose!`);
+    }
 }
 
 function getComputerChoice() {
