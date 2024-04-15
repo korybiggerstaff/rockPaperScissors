@@ -1,6 +1,7 @@
 let playerSelection = "";
 let computerSelection = "";
-let score = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
