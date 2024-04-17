@@ -76,6 +76,12 @@ const compScoreDisp = document.createElement("p");
 compScoreDisp.textContent = `Computer score: ` + computerScore;
 scoreContainer.append(compScoreDisp);
 
+const announce = document.createElement("p");
+announce.textContent = `Press a button to play!`;
+announce.style.textAlign = "center";
+announceBox.appendChild(announce);
+
+
 let button = document.getElementsByClassName("playerInput");
 for (let i = 0; i < button.length; i++) { // Put a click event listener on each button, which plays a round using player input
     button[i].addEventListener("click", () =>{
