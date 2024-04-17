@@ -70,11 +70,11 @@ buttonContainer.appendChild(scissors);
 
 const playerScoreDisp = document.createElement("p");
 playerScoreDisp.textContent = `Player score: ` + playerScore;
-playerScoreContainer.append(playerScoreDisp);
+scoreContainer.append(playerScoreDisp);
 
 const compScoreDisp = document.createElement("p");
 compScoreDisp.textContent = `Computer score: ` + computerScore;
-compScoreContainer.append(compScoreDisp);
+scoreContainer.append(compScoreDisp);
 
 let button = document.getElementsByClassName("playerInput");
 for (let i = 0; i < button.length; i++) { // Put a click event listener on each button, which plays a round using player input
