@@ -81,6 +81,14 @@ announce.textContent = `Press a button to play!`;
 announce.style.textAlign = "center";
 announceBox.appendChild(announce);
 
+container.style.cssText = `display: flex;
+align-items: center;
+gap: 16px;
+max-width: max-content;
+padding: 8px;
+margin: auto;
+margin-top: 10%;
+border: solid 2px black`;
 
 let button = document.getElementsByClassName("playerInput");
 for (let i = 0; i < button.length; i++) { // Put a click event listener on each button, which plays a round using player input
