@@ -7,8 +7,6 @@ const lose = new Audio('lose.mp3');
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
-    console.log(`You picked ${playerSelection}.`);
-    console.log(`The computer picked ${computerSelection}.`);
     if (playerSelection == computerSelection) {
         announce.textContent = `It's a tie!`;
         container.style.backgroundColor = "white";
