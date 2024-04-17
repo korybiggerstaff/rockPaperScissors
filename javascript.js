@@ -50,6 +50,8 @@ rock.setAttribute("id", "rock");
 rock.setAttribute("class", "playerInput");
 rock.textContent = "Rock";
 rock.style.fontSize = "large";
+rock.style.width = "150px";
+rock.style.height = "150px";
 buttonContainer.appendChild(rock);
 
 const paper = document.createElement("button");
@@ -57,6 +59,8 @@ paper.setAttribute("id", "paper");
 paper.setAttribute("class", "playerInput");
 paper.textContent = "Paper";
 paper.style.fontSize = "large";
+paper.style.width = "150px";
+paper.style.height = "150px";
 buttonContainer.appendChild(paper);
 
 const scissors = document.createElement("button");
@@ -64,21 +68,28 @@ scissors.setAttribute("id", "scissors");
 scissors.setAttribute("class", "playerInput");
 scissors.textContent = "Scissors";
 scissors.style.fontSize = "large";
+scissors.style.width = "150px";
+scissors.style.height = "150px";
 buttonContainer.appendChild(scissors);
 
 const playerScoreDisp = document.createElement("p");
 playerScoreDisp.textContent = `Player score: ` + playerScore;
+playerScoreDisp.style.fontSize = "48px";
 scoreContainer.append(playerScoreDisp);
 
 const compScoreDisp = document.createElement("p");
 compScoreDisp.textContent = `Computer score: ` + computerScore;
+compScoreDisp.style.fontSize = '48px';
 scoreContainer.append(compScoreDisp);
 
 const announce = document.createElement("p");
 announce.textContent = `Press a button to play!`;
 announce.style.textAlign = "center";
+announce.style.fontSize = "36px";
 announceBox.appendChild(announce);
 
+buttonContainer.style.cssText = `display: flex;
+gap: 8px`;
 container.style.cssText = `display: flex;
 align-items: center;
 gap: 16px;
