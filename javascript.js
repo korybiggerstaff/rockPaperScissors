@@ -98,12 +98,12 @@ for (let i = 0; i < button.length; i++) { // Put a click event listener on each 
         playerScoreDisp.textContent = `Player score: ` + playerScore;
         compScoreDisp.textContent = `Computer score: ` + computerScore;
         if (playerScore == 5) {
-            alert("Game over -- YOU WIN!");
+            announce.textContent = "Game over -- YOU WIN!";
             rock.disabled = true;
             paper.disabled = true;
             scissors.disabled = true;
         } else if (computerScore == 5) {
-            alert("Game over -- You lose");
+            announce.textContent = "Game over -- You lose";
             rock.disabled = true;
             paper.disabled = true;
             scissors.disabled = true;
