@@ -45,28 +45,29 @@ const container = document.querySelector(".container");
 const buttonContainer = document.querySelector(".buttonContainer");
 const scoreContainer = document.querySelector(".scoreContainer");
 const announceBox = document.querySelector(".announceBox");
+const rock = document.createElement("button");
 rock.setAttribute("id", "rock");
 rock.setAttribute("class", "playerInput");
 rock.textContent = "Rock";
 container.appendChild(rock);
 
-let paper = document.createElement("button");
+const paper = document.createElement("button");
 paper.setAttribute("id", "paper");
 paper.setAttribute("class", "playerInput");
 paper.textContent = "Paper";
 container.appendChild(paper);
 
-let scissors = document.createElement("button");
+const scissors = document.createElement("button");
 scissors.setAttribute("id", "scissors");
 scissors.setAttribute("class", "playerInput");
 scissors.textContent = "Scissors";
 container.appendChild(scissors);
 
-let playerScoreDisp = document.createElement("p");
+const playerScoreDisp = document.createElement("p");
 playerScoreDisp.textContent = `Player score: ` + playerScore;
 playerScoreContainer.append(playerScoreDisp);
 
-let compScoreDisp = document.createElement("p");
+const compScoreDisp = document.createElement("p");
 compScoreDisp.textContent = `Computer score: ` + computerScore;
 compScoreContainer.append(compScoreDisp);
 
