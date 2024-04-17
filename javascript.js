@@ -2,6 +2,8 @@ let playerSelection = "";
 let computerSelection = "";
 let playerScore = 0;
 let computerScore = 0;
+const win = new Audio('win.mp3');
+const lose = new Audio('lose.mp3');
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
@@ -13,12 +15,14 @@ function playRound(playerSelection, computerSelection) {
                 playerSelection == "rock" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "paper") {
         playerScore++;
-        alert(playerSelection + ` beats ` + computerSelection + ` -- You win!`);
+        win.play();
+        announce.textContent = `Your ` + playerSelection + ` beats the computer's ` + computerSelection + ` -- You win!`;
     } else if (playerSelection == "rock" && computerSelection == "paper" || 
                 playerSelection == "paper" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "rock") {
         computerScore++;
-        alert(computerSelection + ` beats ` + playerSelection + ` -- You lose!`);
+        lose.play();
+        announce.textContent = `The computer's ` + computerSelection + ` beats your ` + playerSelection + ` -- You lose!`;
     }
 }
 
