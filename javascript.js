@@ -86,7 +86,8 @@ max-width: max-content;
 padding: 8px;
 margin: auto;
 margin-top: 10%;
-border: solid 2px black`;
+border: solid 2px black;
+border-radius: 15px`;
 
 let button = document.getElementsByClassName("playerInput");
 for (let i = 0; i < button.length; i++) { // Put a click event listener on each button, which plays a round using player input
