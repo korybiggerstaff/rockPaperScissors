@@ -16,12 +16,14 @@ function playRound(playerSelection, computerSelection) {
                 playerSelection == "rock" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "paper") {
         playerScore++;
+        container.style.backgroundColor = "lightBlue";
         win.play();
         announce.textContent = `Your ` + playerSelection + ` beats the computer's ` + computerSelection + ` -- You win!`;
     } else if (playerSelection == "rock" && computerSelection == "paper" || 
                 playerSelection == "paper" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "rock") {
         computerScore++;
+        container.style.backgroundColor = "pink"
         lose.play();
         announce.textContent = `The computer's ` + computerSelection + ` beats your ` + playerSelection + ` -- You lose!`;
     }
