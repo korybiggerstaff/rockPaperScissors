@@ -45,23 +45,28 @@ const container = document.querySelector(".container");
 const buttonContainer = document.querySelector(".buttonContainer");
 const scoreContainer = document.querySelector(".scoreContainer");
 const announceBox = document.querySelector(".announceBox");
+
+
 const rock = document.createElement("button");
 rock.setAttribute("id", "rock");
 rock.setAttribute("class", "playerInput");
 rock.textContent = "Rock";
-container.appendChild(rock);
+rock.style.fontSize = "large";
+buttonContainer.appendChild(rock);
 
 const paper = document.createElement("button");
 paper.setAttribute("id", "paper");
 paper.setAttribute("class", "playerInput");
 paper.textContent = "Paper";
-container.appendChild(paper);
+paper.style.fontSize = "large";
+buttonContainer.appendChild(paper);
 
 const scissors = document.createElement("button");
 scissors.setAttribute("id", "scissors");
 scissors.setAttribute("class", "playerInput");
 scissors.textContent = "Scissors";
-container.appendChild(scissors);
+scissors.style.fontSize = "large";
+buttonContainer.appendChild(scissors);
 
 const playerScoreDisp = document.createElement("p");
 playerScoreDisp.textContent = `Player score: ` + playerScore;
