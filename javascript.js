@@ -10,7 +10,8 @@ function playRound(playerSelection, computerSelection) {
     console.log(`You picked ${playerSelection}.`);
     console.log(`The computer picked ${computerSelection}.`);
     if (playerSelection == computerSelection) {
-        alert(`It's a tie!`);
+        announce.textContent = `It's a tie!`;
+        container.style.backgroundColor = "white";
     } else if (playerSelection == "paper" && computerSelection == "rock" || 
                 playerSelection == "rock" && computerSelection == "scissors" || 
                 playerSelection == "scissors" && computerSelection == "paper") {
