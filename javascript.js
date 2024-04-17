@@ -42,10 +42,9 @@ function getComputerChoice() {
 }
 
 const container = document.querySelector(".container");
-const playerScoreContainer = document.querySelector(".playerScoreContainer");
-const compScoreContainer = document.querySelector(".compScoreContainer");
-
-let rock = document.createElement("button");
+const buttonContainer = document.querySelector(".buttonContainer");
+const scoreContainer = document.querySelector(".scoreContainer");
+const announceBox = document.querySelector(".announceBox");
 rock.setAttribute("id", "rock");
 rock.setAttribute("class", "playerInput");
 rock.textContent = "Rock";
