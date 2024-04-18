@@ -86,7 +86,7 @@ const announce = document.createElement("p");
 announce.textContent = `Press a button to play!`;
 announce.style.textAlign = "center";
 announce.style.fontSize = "36px";
-announceBox.appendChild(announce);
+announceBox.append(announce);
 
 buttonContainer.style.cssText = `display: flex;
 gap: 8px`;
